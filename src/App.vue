@@ -1,11 +1,42 @@
 <template>
   <div id="app">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top px-5">
+      <a class="navbar-brand" href="#">Guía del Pokémon</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-link active" href="#"
+            >Home <span class="sr-only">(current)</span></a
+          >
+          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="#">Contact</a>
+        </div>
+      </div>
+    </nav>
+
     <img class="logo" src="./assets/pokemon-logo.jpg" />
     <h1>PokeGuía</h1>
     <div>
-      <label>Nombre:</label>
-      <input v-model="nombrePokemon" />
-      <button @click="buscarPokemon">Buscar</button>
+      <label>Nombre del Pokémon:</label>
+      <input
+        class="ml-1 mr-2 py-1"
+        type="text"
+        placeholder="Ingrese el nombre"
+        v-model="nombrePokemon"
+      />
+      <button class="btn btn-secondary" type="button" @click="buscarPokemon">
+        Buscar
+      </button>
     </div>
     <div>
       <img :src="frontDefault" />
@@ -86,12 +117,15 @@ export default {
   margin-top: 60px;
 }
 .logo {
-  width: 50vh;
+  width: 90vh;
 }
 .lista {
   list-style: none;
   width: 50vh;
   margin: 0 auto;
+}
+img {
+  width: 10%;
 }
 </style>
 © 2021 GitHub, Inc.
